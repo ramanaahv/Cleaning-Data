@@ -4,3 +4,5 @@ The CodeBook.md file explains the variables, the data, and transformations perfo
 
 The Script file Analysis.R explains the steps that are done on the input file to get the output file Tidy.txt file .
 
+First Download the zip file mentioned in CodeBook.md and after extracting the zip file run the R script Analysis.R to get the final output Tidy.txt.
+
