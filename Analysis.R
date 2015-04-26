@@ -1,6 +1,14 @@
 #The following are the transformations done:
 
 #Libraries:
+if (!require("data.table")) {
+  install.packages("data.table")
+}
+
+if (!require("reshape2")) {
+  install.packages("reshape2")
+}
+
 require("data.table")
 require("reshape2")
 
@@ -43,7 +51,6 @@ combined_clean_data$activity=as.factor(combined_clean_data$activity)
 
 #5. Create independent tidy data set with the average of each variable for each activity and each subject.
 melted_data=melt(combined_clean_data,id=c("Subject","activity"),measure.vars = c(1:86))
-View(melted_data)
 tidy_data=dcast(melted_data,Subject+activity~ variable,mean)
 tidy_data<-tidy_data[order(tidy_data$Subject,tidy_data$activity),]
 write.table(tidy_data, file = "Tidy.txt", row.names = FALSE)
