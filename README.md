@@ -1,4 +1,4 @@
-# This repositgory contains the steps that have been done to address the programming assignment for the Clean data course.
+# This repository contains the steps that have been done to address the programming assignment for the Clean data course.
 
 The CodeBook.md file explains the variables, the data, and transformations performed to clean up the data
 
