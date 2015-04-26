@@ -1,15 +1,15 @@
 #Description of Variables and Tranformation Done
 #Steps For Transformations:
-1. read all the 3 files under the directory test (subject_test,X_test,Y_test)
-2. combine all 3 using cbind by combining first X_test with subject_test and then Y_test.
-3. read all the 3 files under the directory train (subject_train,X_train,Y_train)
-4. combine the 3 files in step3 using cbind by combining first X_train with subject_train and then Y_train .
-5. combine files in step2 and step4 using rbind.Now we will have a big table of 563 variables and 10299 observations.
+1. Read all the 3 files under the directory test (subject_test,X_test,Y_test)
+2. Combine all 3 using cbind by combining first X_test with subject_test and then Y_test.
+3. Read all the 3 files under the directory train (subject_train,X_train,Y_train)
+4. Combine the 3 files in step3 using cbind by combining first X_train with subject_train and then Y_train .
+5. Combine files in step2 and step4 using rbind.Now we will have a big table of 563 variables and 10299 observations.
 6. Read the table fields from features.txt.
-7. grep the rows with mean and standard and store that in 2 different variables mean_cols and std_cols.
-8. now extract a subset of table in step5 by the column numbers present in the 2 variables in above step.
-9. give the column names to the subset of the table in step8 the same names corresponding from features.txt.
-10. now extract another subset of table from step5 containing only the last 2 columns and give them the names as subject and activity.
+7. Grep the rows with mean and standard and store that in 2 different variables mean_cols and std_cols.
+8. Now extract a subset of table in step5 by the column numbers present in the 2 variables in above step.
+9. Give the column names to the subset of the table in step8 the same names corresponding from features.txt.
+10. Now extract another subset of table from step5 containing only the last 2 columns and give them the names as subject and activity.
 11. Combine thesubsets from step 9 and step 10 using cbind.
 12. Now replace the integer values in activity to the corresponding string as in activity_labels.txt
 13. Now using the melt function extract the data having the Subject and ACtivity as constants and rest all as variables.
@@ -17,6 +17,7 @@
 15. Finally order the table based on subject and activity and write it to a new table.
 
 #Variables:
+The below are the 88 variables each containing the mean and standard deviations of the parameters used :
  [1] "Subject"                              "activity"                            
  [3] "tBodyAcc-mean()-X"                    "tBodyAcc-mean()-Y"                   
  [5] "tBodyAcc-mean()-Z"                    "tGravityAcc-mean()-X"                
